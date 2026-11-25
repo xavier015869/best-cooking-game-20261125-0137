@@ -1,0 +1,35 @@
+/* Ember & Thyme — the page around the canvas. The game itself is one
+   1280x800 canvas; this sheet only centres it and keeps it readable. */
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #241a10;
+}
+
+#game {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(100vw, 160vh);
+  height: min(100vh, 62.5vw);
+  display: block;
+  touch-action: none;
+  cursor: pointer;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+}
+
+#game:focus-visible {
+  outline: 3px solid #ffd98a;
+  outline-offset: 4px;
+}
+
+/* Read aloud by screen readers, never shown on screen. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
